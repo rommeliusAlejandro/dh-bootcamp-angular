@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-external',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExternalComponent implements OnInit {
 
-  constructor() { }
+  sales: string[] = [];
+
+  constructor(
+    private route: ActivatedRoute
+  ) { }
 
   ngOnInit(): void {
+    this.sales = this.route.snapshot.data['sales'];
   }
 
 }
