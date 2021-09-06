@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {UsersService} from "../../integration/services/users.service";
 import {map} from "rxjs/operators";
 import {Observable} from "rxjs";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-users-list',
@@ -11,14 +12,25 @@ import {Observable} from "rxjs";
 export class UsersListComponent implements OnInit {
 
   usersData: any[] = []
-
+  userId: string | null = null;
+  user: any = null;
 
   constructor(
-    private readonly usersService: UsersService
+    private readonly usersService: UsersService,
+    private readonly activatedRoute: ActivatedRoute
   ) {
+
   }
 
   ngOnInit(): void {
+
+    this.userId = this.activatedRoute.snapshot.paramMap.get('id');
+
+    this.user = {
+      firstName: this.activatedRoute.snapshot.paramMap.get('firstName'),
+      lastName: this.activatedRoute.snapshot.paramMap.get('lastName')
+    }
+
     this.usersService.getUsers().subscribe(
       users => {
         users.map(user => {

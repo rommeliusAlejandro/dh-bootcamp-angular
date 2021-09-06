@@ -1,2 +1,10 @@
 <h1>My Angular App</h1>
+<div>
+  <button [routerLink]="['/']">Home</button>
+  <button [routerLink]="['/users']">Users</button>
+  <button [routerLink]="['/users/1']">Get User</button>
+  <button [routerLink]="['/users', 'userName']">Get User2</button>
+  <button [routerLink]="['/users', {firstName: 'Rommel', lastName: 'Loayza'}]">Get User Query</button>
+  <button [routerLink]="['/sales']">Sales</button>
+</div>
 <router-outlet></router-outlet>
