@@ -6,5 +6,9 @@
   <button [routerLink]="['/users', 'userName']">Get User2</button>
   <button [routerLink]="['/users', {firstName: 'Rommel', lastName: 'Loayza'}]">Get User Query</button>
   <button [routerLink]="['/sales']">Sales</button>
+  <button [routerLink]="['/commons']">Commons</button>
 </div>
 <router-outlet></router-outlet>
+<section>
+  <lib-chat-container [chatMessages]="chatMessages" (eventChatContainer)="handleMessages($event)"></lib-chat-container>
+</section>

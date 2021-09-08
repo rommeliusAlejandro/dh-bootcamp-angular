@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import {SalesModule} from "./sales/sales.module";
 import {UsersModule} from "./users/users.module";
 import {HomeModule} from "./home/home.module";
+import {CommonsModule} from "@dh-rall/commons";
+import {ChatModule} from "@dh-rall/ui-components";
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import {HomeModule} from "./home/home.module";
     AppRoutingModule,
     SalesModule,
     UsersModule,
-    HomeModule
+    HomeModule,
+    CommonsModule,
+    ChatModule
   ],
   providers: [],
   bootstrap: [AppComponent]

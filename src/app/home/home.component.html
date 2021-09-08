@@ -1,2 +1,14 @@
 <p>home works!</p>
 <app-news></app-news>
+<div>
+  {{counter}}
+  <button (click)="addCounter()">+</button>
+</div>
+<div>
+  <select [(ngModel)]="adTopic">
+    <option>Cars</option>
+    <option>Beauty</option>
+    <option>Real Estate</option>
+  </select>
+</div>
+<app-ad-bar [adTopic]="adTopic"></app-ad-bar>

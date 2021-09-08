@@ -10,10 +10,14 @@ import {HasChangesGuard} from "./shared/guards/has-changes.guard";
 import {GetExternalSalesGuard} from "./shared/guards/get.external-sales.guard";
 import {NotFoundComponent} from "./shared/not-found/not-found.component";
 import {HomeComponent} from "./home/home.component";
+import {CommonsComponent} from "@dh-rall/commons";
 
 const routes: Routes = [
   {
     path: 'home', component: HomeComponent
+  },
+  {
+    path: 'commons', component: CommonsComponent
   },
   {
     path: 'sales', component: SalesListComponent,
