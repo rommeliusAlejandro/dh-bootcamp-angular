@@ -8,6 +8,7 @@ import {UsersModule} from "./users/users.module";
 import {HomeModule} from "./home/home.module";
 import {CommonsModule} from "@dh-rall/commons";
 import {ChatModule} from "@dh-rall/ui-components";
+import {MenuModule} from "@dh-rall/ui-elements";
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {ChatModule} from "@dh-rall/ui-components";
     UsersModule,
     HomeModule,
     CommonsModule,
-    ChatModule
+    ChatModule,
+    MenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
